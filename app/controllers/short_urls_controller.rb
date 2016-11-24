@@ -57,8 +57,4 @@ class ShortUrlsController < ApplicationController
     def short_url_params
       params.require(:short_url).permit(:original, :converted).to_h
     end
-
-    def set_token
-      BaseApi.token = session[:token]
-    end
 end

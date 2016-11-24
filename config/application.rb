@@ -11,5 +11,6 @@ module ShortenerConsumer
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+    ActiveResource::Base.include_root_in_json = true
   end
 end

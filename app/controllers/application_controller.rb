@@ -11,4 +11,8 @@ class ApplicationController < ActionController::Base
   def unauthorized
     redirect_to unauthorized_path
   end
+
+  def set_token
+    BaseApi.token = session[:token]
+  end
 end
