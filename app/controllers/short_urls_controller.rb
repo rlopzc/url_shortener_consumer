@@ -3,7 +3,6 @@ class ShortUrlsController < ApplicationController
   before_action :set_token
 
   # GET /short_urls
-  # GET /short_urls.json
   def index
     @short_urls = ShortUrl.all
   end
