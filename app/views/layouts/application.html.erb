@@ -46,7 +46,10 @@
             <%= link_to 'URLS', short_urls_path, class: 'nav-link' %>
           </li>
           <li class="nav-item active">
-            <%= link_to 'Nuevo usuario', new_user_path, class: 'nav-link' %>
+            <%= link_to 'New User', new_user_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to 'Analytics', analytics_index_path, class: 'nav-link' %>
           </li>
         </ul>
         <%= form_tag(token_path, remote: true, class: 'form-inline float-xs-right col-sm-4')do %>

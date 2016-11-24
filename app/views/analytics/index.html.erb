@@ -1,13 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Short Urls</h1>
+<h1>Analytics</h1>
 
 <table class="table table-bordered">
   <thead>
     <tr>
       <th>Original</th>
       <th>Converted</th>
-      <th colspan="2"></th>
+      <th>Creation date</th>
+      <th>Times used</th>
     </tr>
   </thead>
 
@@ -16,13 +17,11 @@
       <tr>
         <td><%= short_url.original %></td>
         <td><%= link_to short_url.converted, short_url.converted %></td>
-        <td><%= link_to 'Show', short_url %></td>
-        <td><%= link_to 'Destroy', short_url, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= time_ago_in_words(short_url.created_at) + ' ago' %></td>
+        <td><%= short_url.count %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Short Url', new_short_url_path %>

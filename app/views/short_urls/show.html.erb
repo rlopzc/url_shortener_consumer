@@ -10,5 +10,15 @@
   <%= link_to @short_url.converted, @short_url.converted %>
 </p>
 
+<p>
+  <strong>Created:</strong>
+  <%= time_ago_in_words(@short_url.created_at) + ' ago' %>
+</p>
+
+<p>
+  <strong>Times used:</strong>
+  <%= @short_url.count %>
+</p>
+
 <%= link_to 'Edit', edit_short_url_path(@short_url) %> |
 <%= link_to 'Back', short_urls_path %>

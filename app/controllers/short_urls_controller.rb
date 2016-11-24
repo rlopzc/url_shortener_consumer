@@ -17,10 +17,6 @@ class ShortUrlsController < ApplicationController
     @short_url = ShortUrl.new
   end
 
-  # GET /short_urls/1/edit
-  def edit
-  end
-
   # POST /short_urls
   def create
     @short_url = ShortUrl.new(short_url_params)
